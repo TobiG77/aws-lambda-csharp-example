@@ -1,5 +1,13 @@
-# A quick and dirty example on how to roll an AWS Lambda Function with serverless and dotnetcore on ubuntu
+### A quick and dirty example on how to roll an AWS Lambda Function with serverless and dotnetcore on ubuntu
 
+## Prerequisites
+
+1) Serverless
+
+```shell
+
+npm -g install serverless
+```
 
 ## Bootstrap template
 
