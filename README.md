@@ -14,12 +14,19 @@ npm -g install serverless
 ```shell
 
 sls create -t aws-csharp -p aws-lambda-csharp-example
+cd aws-lambda-csharp-example
+
 dotnet migrate
 rm -rf ./backup
+
+# to automatically build the binaries
+npm install serverless-plugin-scripts
 
 ```
 
 ## Build Function
+
+(Optional step, since a custom sls hook does this, too )
 
 ```shell
 dotnet restore

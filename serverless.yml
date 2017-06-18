@@ -20,10 +20,8 @@ service: aws-lambda-csharp-example
 provider:
   name: aws
   runtime: dotnetcore1.0
-
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: staging
+  region: ap-southeast-2
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -98,3 +96,10 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+plugins:
+  - serverless-plugin-scripts
+
+custom:
+  scripts:
+    hooks:
+      'deploy:createDeploymentArtifacts': bash -xe ./build.sh
